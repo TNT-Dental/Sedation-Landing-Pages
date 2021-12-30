@@ -1,2 +1,3 @@
 # Sedation-Landing-Pages
-Landing pages that deal with sedation dentistry
+
+Landing page with review boxes with after elements, mid page form, check boxes, meet dentist and location box.
