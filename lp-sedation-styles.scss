@@ -1,0 +1,482 @@
+address,em{font-style:normal}.clearfix:before,.clearfix:after{display:table;content:" "}.clearfix:after{clear:both}.elem-right,.elem-left,.block{display:block}.elem-right{float:right;margin:0 0 15px 15px}.elem-left{float:left;margin:0 15px 15px 0}.shadow{box-shadow:0 0 3px #000}.center{text-align:center;clear:both}.left{text-align:left;clear:both}.right{text-align:right;clear:both}.clear{clear:both;line-height:0;height:0;width:0}h1:first-child{margin-top:0}figure img{display:block}a{text-decoration:none}ul li{list-style-type:none}.gmap{width:100%}.gmap iframe{display:block}.active iframe{pointer-events:auto}#responsive-nav{display:none;text-align:center}#responsive-nav > a{display:inline-block;vertical-align:middle;padding:3px 10px;color:#000}#responsive-nav > a > i{display:block;font-size:x-large}@media (max-width: 500px){main .elem-right,main .elem-left{max-width:290px;width:100%;float:none;clear:both;margin:0 auto}}img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}body{margin:-5px 0 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:600;font-family:"Manrope"}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}*,:before,:after{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box}.videoWrapper{position:relative;padding-bottom:56.25%;height:0}.videoWrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.star:before{font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color:#d1a53a;padding-right:10px}.container,main,main #page{position:relative;width:100%;margin:0 auto}.container{max-width:1250px}.flex-ed{display:flex}.fix-nav header{z-index:10000;position:fixed;width:100%;left:0;top:0;right:0;-webkit-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:slideInDown;animation-name:slideInDown}img{display:block;margin:0 auto;max-width:100%}.wrapper{max-width:980px;margin:1em auto}a:hover{transition:color .3s,background-color .3s,box-shadow .3s}
+/* ---------------- Animations  ---------------- */
+@-webkit-keyframes slideInDown{from{transform:translate3d(0,-100%,0);visibility:visible}to{transform:translate3d(0,0,0)}}@keyframes slideInDown{from{transform:translate3d(0,-100%,0);visibility:visible}to{transform:translate3d(0,0,0)}}.slideInDown{-webkit-animation-name:slideInDown;animation-name:slideInDown}@-webkit-keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes pulse{from{transform:scale3d(1,1,1)}50%{transform:scale3d(1.05,1.05,1.05)}to{transform:scale3d(1,1,1)}}@keyframes pulse{from{transform:scale3d(1,1,1)}50%{transform:scale3d(1.05,1.05,1.05)}to{transform:scale3d(1,1,1)}}.pulse{-webkit-animation-name:pulse;animation-name:pulse}.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
+
+$primary: #B1A072;
+$secondary:#1d2851;
+$font: "Barlow", sans-serif;
+$font2: "Manrope",sans-serif;
+$text: #0f0d0d;
+
+
+body{color:$text;font:400 18px/26px $font;background-color:#fff}
+h1{font:800 43px/1.3 $font2;color:$secondary;margin:0 auto;text-align:center; letter-spacing: -.03em;}
+h1 span{font-family:$font2;color:$text;font-weight:400;font-size:30px;display:block;margin:30px 0; letter-spacing: .8px;}
+h2{font:600 38px/1.1 $font2;color:$secondary;margin:0 auto;max-width:100%}
+h2 strong{font-weight:300;font-size:50px}
+h3{text-shadow:0 0 40px rgba(255,255,255,0.56);color:$primary;font:700 17px/24px $font;text-transform:uppercase}
+p{color:$text;font:400 20px/34px $font}
+.btn{display:inline-block;position:relative;font:700 18px/1 $font;margin:15px 10px;padding:12px 25px;transition:background-color .3s;text-align:center;color:#fff;border:none;background-color:$primary}
+.btn span{font-weight:700}
+.btn:hover,.header-btn:hover{background-color:$secondary;color:#fff}
+.contain{max-width:1250px;margin:0 auto}
+.split { padding:10px;
+    &.alt figure{order:-1}
+    h2{margin:0 auto}
+    > div{display:flex;justify-content:space-around;align-items:center}
+    figure, article {margin:0;}
+    figure{flex:0 1 auto; display:flex; align-items:flex-end;
+        img{max-width:100%;margin:0 auto;}
+    }
+    article{flex:0 1 680px;padding:10px}
+}
+
+
+header{width:100%;z-index:600;text-align:center;transition:margin .3s;text-align:center;box-shadow:1.5px 2.6px 7px rgba(2,2,2,0.35);background-color:$secondary;box-shadow:1.5px 2.6px 7px rgba(2,2,2,0.35);
+    .contain{display:flex;justify-content:space-around;align-items:center;padding:15px 10px}
+    .tel{color:$primary;font:700 35px/1.3 $font2;margin:0;
+        > span{color:#fff;font:700 14px/1 $font2;margin:0;display:block;text-transform:uppercase; letter-spacing: 1px;}
+        &:hover{color:#fff}
+    }
+    .address{color:#fff;font:400 18px/21px $font;margin:0;display:block;
+        &:hover{color:$primary}
+    }
+    .btn{margin:10px 0 0;text-transform:uppercase;color:#FFF;font:600 17px/21px $font;line-height:1.2; letter-spacing: 0.85px;
+        span{display:block;font-size:34px;font-weight:600}
+        &:hover {background-color: #fff; color: #231f20}
+    }
+}
+
+#banner{padding:40px 10px;background-color:#f3f9fc;background:url(assets/images/lp-sedation-banner.png) no-repeat;background-size:cover; background-position-x: right;position:relative;
+    .contain{flex-wrap:nowrap;align-content:flex-end;position:relative}
+    article{position:relative;flex:0 1 730px;margin-top:10px;text-align:center;padding:10px;margin-right:auto;margin-top:25px;
+        p{color:#010101; padding: 0 5px; max-width: 610px; margin: 20px auto;}
+        .banner-item {background-color: #fff; max-width: 475px; padding: 10px 10px; margin: 20px auto; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);}
+        div {
+            .types-title {color: $primary; font-weight: 600; font-size: 24px; font-family: $font2;}
+            .sedation-options {display: flex; justify-content: center; padding: 0;
+                div{display: flex;margin: 10px 20px; flex: 0 1 45%; justify-content: flex-start; align-items: center; flex-direction:column;
+                    img {margin: 5px; display: block;}
+                    span {font-size: 12px; letter-spacing: 0.03em; line-height: 1.1 ;color: #212121; text-transform: uppercase;}
+                }
+            }
+        }
+    }
+    figure{align-self:flex-end;
+        img{display:none;}
+    }
+
+}
+
+.mobile-stamp{display:none}
+.desktop-stamp{position:absolute;top:0;left:calc(50% - 700px);z-index:10}
+
+.open{text-align:center;background-color:#fdd955;padding:10px;position:relative;z-index:2;
+    div{color:#000;font-size:22px;font-weight:600;text-align:center;letter-spacing:1.5px}
+    a:hover{color:$primary}
+    .dot{margin:0 20px}
+}
+@media screen and (max-width: 900px) {
+    .open span{display:block}
+    .open .dot{display:none}
+}
+
+#smiles{text-align:center;padding:20px 10px 55px;text-align:center;position:relative;z-index:1;
+    .judgement{margin:20px 0;font-family:$font2;font-size:35px;color:#fff; letter-spacing: 1.8px;
+        span{margin:0 15px;}
+    }
+    p{color:#fff;font-size:38px;line-height:1.3;font-family:"Barlow",sans-serif;font-weight:300;margin:20px auto 30px;
+        strong{font-family:$font2;display:block;font-size:55px;color:#c0d2df;font-weight:600}
+    }
+}
+
+#proven{margin:20px 0;text-align:center;
+    h2, p {color:#fff}
+    h2 {font-size:55px;margin-bottom:40px;color:#fff}
+    p {font-size:18px}
+    .contain{padding:100px;background:url(assets/images/sp-sedation-bg-1.png) no-repeat center center,#556778}
+}
+
+#rollovers{margin:30px auto;
+    .contain{display:flex;justify-content:space-between; margin: 75px auto;}
+    article{position:relative;display:flex;flex-direction:column;flex:0 1 50%; background-color:rgba(177, 160, 114, .35);max-width:48%;padding:40px 50px 10px;
+        &:last-of-type {background-color:rgba(177, 160, 114, .35);
+            ul > li {font-size: 26px; margin-bottom: 20px;}
+        }
+        figure p{margin:15px 0;padding:0 10px;line-height:28px;color: $secondary;}
+        &:hover figure{z-index:5;opacity:.95}
+    }
+    ul{overflow:hidden;-moz-column-count:1;column-count:1;padding-left:15px;margin:20px 0;display:table;
+        > li{display:block;position:relative;margin-bottom:10px;text-align:left;font:400 22px/1.25 $font2;color: #212121;
+            &:before{content:url(assets/images/lp-sedation-check.png);left:0;top:0;padding-right:10px;display:inline-block;vertical-align:middle}
+        }
+    }
+    h2{padding:0 0 0 10px;margin:0 0 10px;color: $secondary; font-size:38px}
+}
+
+
+#dentist{background-color:#1D2122;padding:65px 25px;margin:30px auto 50px;max-width:1260px; color:#fff;
+    > div{margin:15px auto;padding:0 15px;justify-content:space-between}
+    h2{margin:0 auto 10px;color:$primary;font:600 41px/1.3 $font2;text-align:left;
+        span{font-size:50px;font-weight:700;line-height:42px;}
+
+    }
+    h2 a, h3 a{color:#fff;font:700 18px/1.3 $font;text-transform:uppercase;
+        &:hover{color:$primary}
+    }
+    figure{margin:0 75px 20px 0;float: left; position: relative;
+        a{font-family:$font2;font-weight:700;font-size:15px;color:#fff;display:block;text-align:center; max-width: 320px; letter-spacing: .1em; text-transform: uppercase; position: relative; left: 50%; transform: translateX(-50%); width: 320px; bottom: -10px;
+            &:hover{color:#000}
+        }
+    }
+    ul{padding-left:0;-moz-column-count:2;column-count:2;
+        li:before{font-family:'fontello';content:'\e832';color:$primary;margin-right:5px}
+    }
+    article{flex:1 1 60%;padding:0 18px}
+    p{font-size:18px;line-height:30px;color:#fff; letter-spacing: .3px;}
+    .btn {margin: 20px 0;}
+}
+
+hr{margin-top:30px;width:100%;border-bottom:1px solid #00355fb3;display:none}
+
+#affil{position:relative;padding:20px 0; background-color: rgba(232, 246, 253, .7);margin:0 auto 100px;
+    h4{color:#fefefe;background-color:#FAD24D;position:absolute;bottom:100%;left:0;right:0;width:300px;margin:0 auto;padding:11.5px 10px;font:700 20px/1 $font2;text-align:center}
+    .affil-topper {position:absolute;bottom:100%;left:0;right:0;}
+    div{max-width:1260px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;
+        span{margin:10px auto;padding:0 20px;
+            img {filter: grayscale(100%);}
+        }
+    }
+}
+
+#reviews{max-width:1300px;margin: 60px auto;padding:10px;position:relative;z-index:1; margin-bottom: 125px; 
+    h2 {text-align: center; margin-bottom: 50px; font-size: 42px; color: $primary;}
+    .flex-ed {justify-content: space-between;}
+}
+.review{flex:1 1 45%;margin:10px 10px 10px 0;position:relative;z-index:1;margin-left:10px;text-align:center;z-index:4; max-width: 600px;
+    &:first-of-type{border-right:6px solid #556778;
+        &:after{content:'';width:214px;height:129px;background-color:#556778;position:absolute;bottom:-5px;left:-5px;z-index:-1;}
+    }
+    &:last-of-type:before{content:'';width:214px;height:129px;background-color:#556778;position:absolute;bottom:-5px;right:0;z-index:-1;}
+    .author{font-size:19px;font-weight:600;font-family:"Barlow",sans-serif} 
+    .inner-review{position:relative;height:auto;padding:40px 20px;background-color:#F3FAFF; height: 100%;}
+    p{color:$text;font:400 16px/1.85 $font,sans-serif;max-width:500px;text-align:center;margin:20px auto;}
+    .star{margin:10px 0;font-style:normal;font-size:20px;font-weight:700;letter-spacing:4.7px;
+        &:before{color:#febb21}
+    }
+    &:last-of-type {
+        .inner-review {padding-top: 55px;}
+        p {font-size: 16px; max-width: 83%;}
+    }
+}
+
+
+#forms{position:relative;background-color:$secondary; padding: 100px 10px 40px;
+    form{text-align:center;background-color:#fff; box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.16);padding:20px 140px 40px;max-width:1150px;margin:0 auto;z-index:3;position:relative;
+        h3{font:700 42px/1 $font2;text-transform:none;color:$secondary;margin:30px 0}
+        input, textarea, select{height:44px;border:none;background-color:#f2f2f2;font-size:17px;font-family:"Barlow",sans-serif;color:$text;padding:5px;display:block}
+        textarea{width:100%;height:96px}
+        .btn{margin:8px 0 0}
+    }
+    .container{display:flex;justify-content:space-between;align-items:flex-start;width:100%;flex-wrap:wrap;max-width:725px;
+        div{flex:0 1 45%;max-width:310px;display:flex;flex-direction:column;justify-content:center;
+            &:last-of-type {max-width: 400px; flex: 0 1 55%;}
+        }
+        span{font-size:16px;padding:5px 0;
+            input,select{width:100%}
+        }
+        select{min-width:140px}
+    }
+}
+
+
+#where {
+    h2{color:$primary;font-size:55px}
+    .contain{justify-content:center;padding:85px 20px;background-color: $secondary;margin:10px auto 60px;max-width:1260px;}
+    article{align-self:flex-start;padding:0 10px;margin-right:30px;margin-top:30px;
+        p{font-size:18px;line-height:32px;color:#fff;}
+    }
+}
+.gmap iframe{max-width:100%}
+.gmap{cursor:pointer;position:relative;width:auto;
+    iframe{max-width:100%; width:450px}
+    &.active iframe{pointer-events:all}
+}
+
+.simple{max-width:270px;margin:auto;
+    input, textarea, select{box-sizing:border-box!important;border:0;padding:0 10px;margin-bottom:5px;width:245px;height:31px;background-color:#fff;color:#556778;font:400 16px/16px $font}
+    textarea{height:55px!important}
+    input:focus, select:focus, textarea:focus{outline:0;outline-style:solid;outline-width:thin;outline-color:#00843e; background-color:#edf4f9}
+}
+
+footer .btn,.submit-btn{width:245px;margin-top:0;color:#fff;text-shadow:none;font-family:$font2;font-size:14px;font-weight:700}
+
+footer{padding:0;position:relative;text-align:center}
+#footer-content{background-color:#e9f0f4;
+    .container{max-width:1250px;margin:auto;flex-wrap:wrap;justify-content:center;padding:90px 10px;display:flex;}
+    h3{font:700 20px/1 $font2;text-transform:none;color:$secondary;}
+    .emer{font:700 20px/1 $font2;color:$primary;
+        &:hover{color:#000}
+    }
+}
+
+.contact-form .simple{margin:auto}
+.line{display:inline-block;width:2px;margin:auto;height:273px;background-color:#fff}
+.hours{color:#313131;font:400 18px/30px $font;max-width:350px;width:100%;margin:10px auto 30px;text-align:left;display:table;
+    label{width:110px;font-weight:600;float:left;text-align:left;display:inline-block;width:120px;text-align:left; margin-left: 20px;}
+}
+
+.started{flex:0 1 530px;padding:0 20px 50px;text-align:center;align-self:center;color:#fff;
+    p{margin:auto;margin-top: 35px;font-size:18px;line-height:32px;text-align:left}
+}
+footer h2{text-align:left;color:#4E5051;font-weight:800; font-size: 42px; margin-top: 15px;}
+.office-details{padding:0 20px}
+#copyright{padding:40px 0;text-align:center;color:#556778;font:400 16px/1.3 $font;
+    a{color:$text;
+        &:hover{color:$primary}
+    }
+}
+
+#fixed-tabs{position:fixed;right:0;text-align:center;line-height:1;font-size:0;z-index:400;
+    a{position:relative;overflow:hidden;font-size:13px;color:#fff;font-weight:700;text-transform:uppercase;transition:width .3s;}
+    i{font-size:19px}
+    i, &:before{display:inline-block;margin:0 auto!important}
+    em{font-size:13px;font-style:normal;display:inline-block;text-transform:none;margin-left:7px}
+    a:nth-of-type(odd){background-color:$primary}
+    a:nth-of-type(even){background-color:$secondary}
+}
+
+#lp-appointment-form{max-width:800px;padding:30px 10px 20px;margin:20px auto;text-align:center;background-color:#e5e5e5;
+    .wrapper{margin:10px auto;text-align:center;padding:10px 0}
+    h1{text-align:center;margin-bottom:30px;
+        strong{font-size:50px;margin:10px auto 40px;max-width:100%}
+    }
+    p{max-width:650px;margin:auto;margin-bottom:30px}
+    .simple{margin:40px auto 20px;max-width:550px;padding-right:3px}
+    label{display:none}
+    input,textarea{width:97%;display:table;margin:10px auto;padding:8px}
+    textarea{padding:0 0 0 8px;height:200px!important;margin-bottom:20px}
+}
+
+
+@media (max-width: 1450px) {
+    .desktop-stamp {left: 1%;}
+}
+@media (max-width: 1300px) {
+    #smiles p{font-size:40px}
+    #smiles p strong{font-size:50px}
+}
+@media (min-width: 1031px) {
+    #fixed-tabs{display:none}
+}
+@media (max-width: 1030px) {
+    #fixed-tabs{bottom:0;width:100%;box-shadow:0 0 15px rgba(0,0,0,0.3);
+        article{display:flex}
+        a{padding:13px 0;flex:1;
+            span{display:inline-block;vertical-align:middle;
+                &:last-child{margin-left:7px}
+            }
+        }
+        i{font-size:16px}
+    }
+    footer{margin-bottom:42px!important}
+}
+@media (max-width: 600px) {
+    #fixed-tabs em strong{display:none}
+}
+@media screen and (max-width: 1160px) {
+    #smiles p{font-size:20px;
+        strong{font-size:36px}
+    }
+}
+@media screen and (max-width: 1150px) {
+    #banner{background-position:-100px;height:auto}
+    .desktop-stamp {top: -200px;}
+    #rollovers h2{font-size:32px;
+        strong{font-size:55px}
+    }
+    #rollovers article:first-of-type{margin-right:10px}
+    #rollovers article:last-of-type figure:last-of-type h2{margin-bottom:0}
+    #rollovers article figure{padding:20px 10px 0}
+}
+@media screen and (max-width: 1100px) {
+    #rollovers ul > li{font-size:24px}
+    #rollovers article figure p{line-height:24px;margin:8px 0}
+    .gmap a{margin:0 auto 30px}
+    .started{flex:1 1}
+}
+@media screen and (max-width: 1070px) {
+    .started{margin-top:20px}
+}
+@media screen and (max-width: 1030px) {
+    #banner{background:none;padding:0;margin:20px auto 0;
+        .contain{display:block}
+        article{flex:1 1 100%}
+        p:last-of-type{max-width:100%}
+    }
+    .stamp{bottom:-20px;left:auto;right:10px}
+    h1{text-align:center}
+    #banner figure img{display:block;width:100%}
+    .gmap iframe{max-width:100%}
+    footer section{text-align:center}
+    .border{margin:0 auto}
+    .border .contain{padding:10px}
+    #rollovers h2{margin-bottom:20px}
+    #rollovers .contain{display:block}
+    #rollovers article{text-align:center;margin:20px auto;padding:10px}
+    #rollovers article{max-width:100%;margin:30px auto}
+    #rollovers ul{display:table;margin:10px auto;width:100%}
+    #rollovers article:last-of-type figure:last-of-type h2{margin:auto}
+    #rollovers article figure{padding:10px}
+    #rollovers article:last-of-type{background-image:none}
+    #rollovers article figure{position:static;opacity:1!important;z-index:5;margin:-5px auto 10px}
+    #rollovers article:first-of-type figure h2,#rollovers article:last-of-type figure:last-of-type h2{display:none}
+    .split{padding:0}
+    footer{padding:0 0 10px}
+    #footer-content{padding:0;justify-content:space-around}
+    #dentist > div{display:block;max-width:800px}
+    #dentist .dr{margin-top:30px}
+    #dentist figure{flex:1 1 100px;align-self:flex-start; width: 100%;}
+    #dentist h2{text-align:center}
+    #dentist p {text-align: center;}
+    #dentist figure{flex:1 1 35%}
+    #dentist .dr:nth-of-type(1) figure,#dentist .dr:nth-of-type(2) figure,#dentist .dr:nth-of-type(3) figure{background-position:center -10px}
+    #where .contain {display: block; text-align: center;}
+    #where .gmap {margin: 30px auto; justify-content: center;}
+}
+@media screen and (max-width: 1000px) {
+    header .address,header .tel{display:none}
+    #banner .contain{display:block}
+    hr{display:block}
+    #forms form{padding:20px}
+    #proven .contain{padding:30px 10px}
+    #rollovers article{max-width:none}
+    #rollover ul{padding-left:0}
+    #affil{margin-top:75px}
+    .line{margin:20px 30px}
+    .line:nth-of-type(2){display:none}
+    #footer-content{padding-bottom:20px}
+    .started{flex:1 0 100%;padding-bottom:20px;margin-top:0}
+    .started h2{text-align:center}
+    .simple{margin:0}
+    .desktop-stamp {display: none}
+    .mobile-stamp{display:block;margin:0 auto;text-align:center}
+    .mobile-stamp .stamp{position:static;margin-bottom:70px}
+}
+@media screen and (max-width: 900px) {
+    .split > .desktop-stamp{display:none}
+    #forms .container{flex-direction:column;align-items:center}
+    #forms .container div{flex:0 1 auto;width:100%; max-width: 90%;}
+    #forms .container div:last-of-type {max-width: 90%;}
+    #forms .container span{flex:0 1 100%;width:100%}
+    #smiles{display:block}
+    #smiles .judgement{font-size:20px;display:flex;flex-direction:column}
+    #smiles .judgement span{opacity:0}
+    #smiles p{margin:0;padding:20px 0}
+    #rollovers ul{max-width:422px}
+    #reviews .flex-ed {flex-wrap: wrap; justify-content: center;}
+    #reviews .review {flex: 0 1 100%; max-width: 700px;}
+}
+@media screen and (max-width: 800px) {
+    #banner article{padding-top:20px;}
+    h2,#dentist h2 span{text-align:center;font-size:32px}
+    h2 strong,#rollovers h2 strong{font-size:45px}
+    #banner p:last-of-type{max-width:100%}
+    .stamp{position:static;margin-bottom:-100px}
+    #proven h2{font-size:30px}
+    #reviews{display:inline-block;padding:0 10px}
+    .facebook p:first-of-type{margin-top:50px}
+    .review{margin:30px auto 0}
+    .review p{line-height:1.4}
+    .review:before,.review:after,.video:before,.line{display:none}
+    #where .contain{display:block}
+    #where h2{text-align:center}
+    #where article{margin:auto}
+    .border article{margin:auto;padding-bottom:20px}
+    .gmap a{flex:1;margin-bottom:0}
+    .gmap iframe{width:100%;margin:0 auto 20px}
+    #lp-appointment-form h1 strong{font-size:40px;line-height:1.4}
+    #dentist figure {float: none;}
+}
+@media screen and (max-width: 770px) {
+    #affil img{max-height:55px}
+    #rollovers article figure{position:static;opacity:1!important;z-index:5;margin:0 auto}
+    .border{text-align:center}
+    #footer-content .container{justify-content:space-around}
+}
+@media screen and (max-width: 680px) {
+    header{position:static;padding:0 0 10px}
+    .header-logo img{max-width:280px}
+    header .contain{display:block}
+    header .btn{margin-top:20px}
+    #banner article{padding-top:0}
+    h1{font-size:36px}
+    h1 span{font-size:32px}
+    #forms form h3{font-size:23px}
+    #smiles p strong{font-size:30px}
+    #smiles p{font-size:26px}
+    #dentist h2:first-of-type{text-align:center}
+    #affil div{max-width:550px}
+    #rollovers .caption{left:10px}
+    #rollovers .caption:last-of-type{right:10px}
+    #dentist p{text-align:center}
+    #dentist strong{display:block;text-align:center}
+    #dentist ul{max-width:280px;margin:0 auto}
+    #dentist > div{padding:0}
+    #dentist .dr{flex-wrap:wrap;justify-content:center}
+    #dentist figure{flex:0 1 300px;margin:10px auto 20px}
+    #dentist article{flex:1 0 100%;margin-bottom:20px;order:-1}
+    #dentist{margin-bottom:0}
+    #reviews .review{border:none}
+    .started{padding-top:40px;}
+}
+@media screen and (max-width: 520px) {
+    h1{font-size:26px;line-height:1.4}
+    h1 span,#dentist h2 span{font-size:20px}
+    #smiles p,#smiles p strong,h2,.started h2{font-size:28px}
+    #banner article p,#where article p{font-size:16px}
+    #affil div{justify-content:center}
+    #affil div span{margin:10px 20px;margin:10px 20px}
+    #rollovers ul > li{font-size:20px;line-height:1.3}
+    #rollovers h2{font-size:24px}
+    #rollovers h2 strong{font-size:32px}
+    #rollovers article:first-of-type figure{display:none}
+    #rollovers article:last-of-type{padding-top:10px}
+    #rollovers article:last-of-type figure{margin-bottom:0}
+    #rollovers figure:last-of-type p{margin:10px auto}
+    #rollovers .caption{padding:5px;font-size:14px;left:5px;bottom:5px}
+    #rollovers .caption:last-of-type{right:5px}
+    #dentist ul{-moz-column-count:1;column-count:1}
+    .review p:nth-child(2){margin-top:15px}
+    #where p,.started p{font-size:16px}
+    .office-details{padding:0 10px}
+    #copyright em{display:block;visibility:hidden;font-size:1px}
+    #rollovers article figcaption{position:static;width:100%}
+    h2 strong,#lp-appointment-form h1 strong{font-size:32px}
+    .gmap{display:none!important}
+}
+@media screen and (max-width: 400px) {
+    header img{max-width:150px}
+    .stamp{margin-bottom:20px}
+    h2{font-size:25px}
+    h2 strong,.started h2 strong{font-size:30px}
+    #smiles{padding:10px}
+    #smiles p{font-size:16px}
+    #smiles p strong{font-size:18px}
+    #rollovers h2,#rollovers article:last-of-type figure:last-of-type h2,#where h2{font-size:26px}
+    #rollovers ul{padding-left:0}
+    #rollovers ul > li{font-size:17px;margin-bottom:0}
+    #rollovers ul > li:before{transform:scale(0.8)}
+    #dentist figure{flex:1 1 70%}
+    #affil div{justify-content:space-around}
+    #affil div span{margin:10px}
+    #affil img{max-height:40px}
+    .started{flex:1 1 400px}
+    #copyright{font-size:12px}
+    #lp-happy-form .simple input,#lp-happy-form .simple textarea{width:280px}
+    #lp-happy-form h1{font-size:36px}
+}
+@media screen and (max-width: 360px) {
+    #rollovers ul > li{font-size:15px}
+    #rollovers ul > li:before{margin-right:-10px;transform:scale(0.6)}
+}
